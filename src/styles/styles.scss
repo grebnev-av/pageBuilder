@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@900&family=Rubik:wght@500;700&display=swap');
+@import "~normalize.css/normalize.css";
+@import "src/styles/colors";
+@import "src/styles/variables";
+@import "src/styles/fonts";
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+html {
+    font-size: 10px
+}
+
+@media only screen and (max-width: 1100px) {
+    html {
+        font-size: 8px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px
+    }
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    font-size: 22px;
+    line-height: 24px;
+
+    @media (max-width: $desktop) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 130px 0 0;
+
+    @media (max-width: $desktop) {
+        padding: 71px 0 0;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+    
+    &_page {
+        padding: 0;
+        height: 100%;
+        overflow: scroll;
+        overflow-x: hidden;
+        
+        position: fixed;
+        top: 68px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
